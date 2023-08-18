@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id = "@+id/line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="480dp" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/enableADRO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="Enable ADRO"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/EuD1"
+        android:text="Distance1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/EuD2"
+        android:text="Distance2"
+        />
+    <TextView
+        android:id="@+id/frametime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frame Processing time: "
+        />
+
+
+
+
+</LinearLayout>

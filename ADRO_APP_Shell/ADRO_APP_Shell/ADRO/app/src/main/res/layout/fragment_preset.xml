@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    tools:context=".PresetFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/EnterAudiogram"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toTopOf="@id/AGInput"
+            app:layout_constraintEnd_toStartOf="@id/EnterCT"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Audiogram:"
+            android:textSize="18sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/EnterCT"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toTopOf="@id/CTInput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/EnterAudiogram"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="ComfortTarget:"
+            android:textSize="18sp">
+
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AGInput"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="125-250Hz"
+            app:boxBackgroundMode="outline"
+            app:layout_constraintBottom_toTopOf="@id/AGInput2"
+            app:layout_constraintEnd_toStartOf="@id/CTInput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/EnterAudiogram">
+
+            <AutoCompleteTextView
+                android:id="@+id/AGInputText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="number"
+                app:simpleItems="@array/audiogramOptions" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CTInput"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="125-250Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/CTInput2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/AGInput"
+            app:layout_constraintTop_toBottomOf="@id/EnterCT">
+
+            <AutoCompleteTextView
+                android:id="@+id/CTInputText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AGInput2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="250-500Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/AGInput3"
+            app:layout_constraintEnd_toStartOf="@id/CTInput2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/AGInput">
+
+            <AutoCompleteTextView
+                android:id="@+id/AGInput2Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CTInput2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="250-500Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/CTInput3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/AGInput2"
+            app:layout_constraintTop_toBottomOf="@id/CTInput">
+
+            <AutoCompleteTextView
+                android:id="@+id/CTInput2Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AGInput3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="500-750Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/AGInput4"
+            app:layout_constraintEnd_toStartOf="@id/CTInput3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/AGInput2">
+
+            <AutoCompleteTextView
+                android:id="@+id/AGInput3Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CTInput3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="500-750Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/CTInput4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/AGInput3"
+            app:layout_constraintTop_toBottomOf="@id/CTInput2">
+
+            <AutoCompleteTextView
+                android:id="@+id/CTInput3Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AGInput4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="750-1000Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/AGInput5"
+            app:layout_constraintEnd_toStartOf="@id/CTInput4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/AGInput3">
+
+            <AutoCompleteTextView
+                android:id="@+id/AGInput4Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CTInput4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="750-1000Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/CTInput5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/AGInput4"
+            app:layout_constraintTop_toBottomOf="@id/CTInput3">
+
+            <AutoCompleteTextView
+                android:id="@+id/CTInput4Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AGInput5"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="1000-1500Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/AGInput6"
+            app:layout_constraintEnd_toStartOf="@id/CTInput5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/AGInput4">
+
+            <AutoCompleteTextView
+                android:id="@+id/AGInput5Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CTInput5"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="1000-1500Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/CTInput6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/AGInput5"
+            app:layout_constraintTop_toBottomOf="@id/CTInput4">
+
+            <AutoCompleteTextView
+                android:id="@+id/CTInput5Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AGInput6"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="1500-2000Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/AGInput7"
+            app:layout_constraintEnd_toStartOf="@id/CTInput6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/AGInput5">
+
+            <AutoCompleteTextView
+                android:id="@+id/AGInput6Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CTInput6"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="1500-2000Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/CTInput7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/AGInput6"
+            app:layout_constraintTop_toBottomOf="@id/CTInput5">
+
+            <AutoCompleteTextView
+                android:id="@+id/CTInput6Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AGInput7"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="2000-3000Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/AGInput8"
+            app:layout_constraintEnd_toStartOf="@id/CTInput7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/AGInput6">
+
+            <AutoCompleteTextView
+                android:id="@+id/AGInput7Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CTInput7"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="2000-3000Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/CTInput8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/AGInput7"
+            app:layout_constraintTop_toBottomOf="@id/CTInput6">
+
+            <AutoCompleteTextView
+                android:id="@+id/CTInput7Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AGInput8"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="3000-4000Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/AGInput9"
+            app:layout_constraintEnd_toStartOf="@id/CTInput8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/AGInput7">
+
+            <AutoCompleteTextView
+                android:id="@+id/AGInput8Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CTInput8"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="3000-4000Hz"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:layout_constraintBottom_toTopOf="@id/CTInput9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/AGInput8"
+            app:layout_constraintTop_toBottomOf="@id/CTInput7">
+
+            <AutoCompleteTextView
+                android:id="@+id/CTInput8Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AGInput9"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="24dp"
+            android:hint="4000-6000Hz"
+            app:boxBackgroundMode="outline"
+            app:layout_constraintBottom_toTopOf="@id/save"
+            app:layout_constraintEnd_toStartOf="@id/CTInput9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/AGInput8">
+
+            <AutoCompleteTextView
+                android:id="@+id/AGInput9Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CTInput9"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="4000-6000Hz"
+            app:boxBackgroundMode="outline"
+            app:layout_constraintBottom_toTopOf="@id/save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/AGInput9"
+            app:layout_constraintTop_toBottomOf="@id/CTInput8">
+
+            <AutoCompleteTextView
+                android:id="@+id/CTInput9Text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                app:simpleItems="@array/audiogramOptions" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/save"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Save Preset"
+            android:onClick="savePreset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CTInput9"
+            tools:ignore="MissingConstraints"></Button>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>
+
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/Preset"
+        android:enabled="true"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="Preset">
+    </item>
+
+    <item android:id="@+id/runADRO"
+        android:enabled="true"
+        android:icon="@drawable/baseline_play_circle_filled_24"
+        android:title="Run ADRO">
+    </item>
+
+</menu>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Presetlist"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Select Preset"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintBottom_toTopOf="@id/currentPreset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <AutoCompleteTextView
+            android:id="@+id/PresetSelect"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="none"
+             />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/currentPreset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/Audiolist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Presetlist"
+        android:text="Audiogram: \nComfort Target:"
+        android:textSize="18sp">
+
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Audiolist"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Select Audio File"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintBottom_toTopOf="@id/move"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currentPreset">
+
+        <AutoCompleteTextView
+            android:id="@+id/AudioSelect"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="none"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/move"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:text="Run ADRO"
+        android:onClick="runADRO"
+        app:layout_constraintBottom_toTopOf="@id/enableStore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Audiolist"></Button>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/enableStore"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:checked="false"
+        android:text="Enable Data Saving"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/move"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
